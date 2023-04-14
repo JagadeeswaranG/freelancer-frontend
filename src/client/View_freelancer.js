@@ -15,13 +15,13 @@ function View_freelancer() {
     try {
       let projectsData = await listFreelancer(params.cId, params._id);
       if (projectsData.data.length !== 0) {
-         setUser(projectsData.data[0].freelancer);        
+        setUser(projectsData.data[0].freelancer);
       } else {
         alert("No Freelancer Applied...");
-        navigate(`/client_portal/viewProjects/${params.cId}`)
+        navigate(`/client_portal/viewProjects/${params.cId}`);
       }
     } catch (error) {
-        console.log(error);
+      console.log(error);
       alert(error.response.data.message);
     }
   }
@@ -33,16 +33,11 @@ function View_freelancer() {
         {user.map((item) => {
           return (
             <div className="col-lg-4">
-              <div
-                class="card border-dark mb-3"
-                style={{ maxWidth: "18rem" }}
-              >
+              <div class="card border-dark mb-3" style={{ maxWidth: "18rem" }}>
                 <div class="card-header">Freelancer ID: {item._id}</div>
                 <div class="card-body text-danger">
                   <h5 class="card-title">Name : {item.name}</h5>
-                  <p class="card-text">
-                   Email : {item.email}
-                  </p>
+                  <p class="card-text">Email : {item.email}</p>
                 </div>
               </div>
             </div>

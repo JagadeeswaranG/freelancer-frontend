@@ -14,6 +14,7 @@ function Post_project() {
       about: "",
       duration: "",
     },
+    // Form Validation
     validate: (values) => {
       let error = {};
 

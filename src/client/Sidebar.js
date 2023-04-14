@@ -6,7 +6,7 @@ import { config } from "../config/Config";
 function Sidebar() {
   const [user, setUser] = useState();
 
-   useEffect(() => {
+  useEffect(() => {
     setUser(localStorage.getItem(config.storage_key2));
   });
 
@@ -28,7 +28,7 @@ function Sidebar() {
 
       <li class="nav-item">
         <Link
-            to={`/client_portal/viewProjects/${user}`}
+          to={`/client_portal/viewProjects/${user}`}
           class="nav-link collapsed"
           href="#"
           data-toggle="collapse"
@@ -40,21 +40,6 @@ function Sidebar() {
           <span id="subtitle">My Projects</span>
         </Link>
       </li>
-      {/* <li class="nav-item">
-        <Link
-          //   to={"/admin_portal/students/list"}
-          class="nav-link collapsed"
-          href="#"
-          data-toggle="collapse"
-          data-target="#collapseTwo"
-          aria-expanded="true"
-          aria-controls="collapseTwo"
-        >
-          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-          <span id="subtitle">Post New Projects</span>
-        </Link>
-      </li> */}
-
       <hr class="sidebar-divider" />
     </ul>
   );

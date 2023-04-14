@@ -57,7 +57,11 @@ function View_projects() {
                       <td>{item.duration}</td>
                       <td>{item.freelancer.length}</td>
                       <td>
-                        <Link to={`/client_portal/viewFreelancers/${item.cId}/${item._id}`} type="button" class="btn btn-success">
+                        <Link
+                          to={`/client_portal/viewFreelancers/${item.cId}/${item._id}`}
+                          type="button"
+                          class="btn btn-success"
+                        >
                           View
                         </Link>
                       </td>
@@ -71,6 +75,6 @@ function View_projects() {
       </div>
     </div>
   );
-} 
+}
 
 export default View_projects;
